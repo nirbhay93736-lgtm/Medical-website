@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Management | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html" class="side-active">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Stock Management</h1>
+                <p>Monitor and manage your medicine inventory</p>
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STOCK SUMMARY -->
+        <section class="stock-summary">
+
+            <div class="stock-stat">
+
+                <div class="stock-stat-icon blue">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+
+                <div>
+                    <span>Total Stock</span>
+                    <strong>1,845</strong>
+                    <small>Units available</small>
+                </div>
+
+            </div>
+
+
+            <div class="stock-stat">
+
+                <div class="stock-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>Good Stock</span>
+                    <strong>1,612</strong>
+                    <small>87.4% of total</small>
+                </div>
+
+            </div>
+
+
+            <div class="stock-stat">
+
+                <div class="stock-stat-icon orange">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <span>Low Stock</span>
+                    <strong>18</strong>
+                    <small>Needs restocking</small>
+                </div>
+
+            </div>
+
+
+            <div class="stock-stat">
+
+                <div class="stock-stat-icon red">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                </div>
+
+                <div>
+                    <span>Expired</span>
+                    <strong>9</strong>
+                    <small>Remove from stock</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERTS -->
+        <section class="stock-alert-grid">
+
+            <div class="dashboard-card stock-alert-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>
+                            <i class="fa-solid fa-triangle-exclamation warning-title"></i>
+                            Low Stock Alert
+                        </h3>
+
+                        <p>Medicines that need immediate restocking</p>
+                    </div>
+
+                    <span class="alert-count">3 Items</span>
+
+                </div>
+
+
+                <div class="stock-alert-item">
+
+                    <div class="stock-product-icon">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+
+                    <div class="stock-product-info">
+                        <strong>Paracetamol 500mg</strong>
+                        <small>Sun Pharma</small>
+                    </div>
+
+                    <div class="stock-number">
+                        <strong>8</strong>
+                        <small>units left</small>
+                    </div>
+
+                    <button class="restock-btn">
+                        Restock
+                    </button>
+
+                </div>
+
+
+                <div class="stock-alert-item">
+
+                    <div class="stock-product-icon">
+                        <i class="fa-solid fa-capsules"></i>
+                    </div>
+
+                    <div class="stock-product-info">
+                        <strong>Azithromycin 250mg</strong>
+                        <small>Cipla</small>
+                    </div>
+
+                    <div class="stock-number">
+                        <strong>5</strong>
+                        <small>units left</small>
+                    </div>
+
+                    <button class="restock-btn">
+                        Restock
+                    </button>
+
+                </div>
+
+
+                <div class="stock-alert-item">
+
+                    <div class="stock-product-icon">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+
+                    <div class="stock-product-info">
+                        <strong>Amoxicillin 500mg</strong>
+                        <small>Abbott</small>
+                    </div>
+
+                    <div class="stock-number">
+                        <strong>9</strong>
+                        <small>units left</small>
+                    </div>
+
+                    <button class="restock-btn">
+                        Restock
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPIRED -->
+            <div class="dashboard-card expired-stock-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>
+                            <i class="fa-solid fa-calendar-xmark expired-title"></i>
+                            Expired Medicines
+                        </h3>
+
+                        <p>Remove these medicines from inventory</p>
+                    </div>
+
+                    <span class="expired-count">3 Items</span>
+
+                </div>
+
+
+                <div class="expired-item">
+
+                    <div>
+                        <strong>Vitamin D3</strong>
+                        <small>Himalaya</small>
+                    </div>
+
+                    <span>Sep 2026</span>
+
+                </div>
+
+
+                <div class="expired-item">
+
+                    <div>
+                        <strong>Cetirizine 10mg</strong>
+                        <small>Dr. Reddy's</small>
+                    </div>
+
+                    <span>Oct 2026</span>
+
+                </div>
+
+
+                <div class="expired-item">
+
+                    <div>
+                        <strong>Ibuprofen 400mg</strong>
+                        <small>Abbott</small>
+                    </div>
+
+                    <span>Oct 2026</span>
+
+                </div>
+
+                <button class="view-expired-btn">
+                    View All Expired Medicines
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- INVENTORY -->
+        <section class="dashboard-card inventory-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>Current Stock</h3>
+                    <p>Complete inventory overview</p>
+                </div>
+
+                <div class="inventory-tools">
+
+                    <div class="stock-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search stock..."
+                        >
+                    </div>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Good Stock</option>
+                        <option>Low Stock</option>
+                        <option>Expired</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="inventory-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Medicine</th>
+                            <th>Company</th>
+                            <th>Total Qty.</th>
+                            <th>Sold</th>
+                            <th>Available</th>
+                            <th>Expiry</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="medicine-name">
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Paracetamol 500mg</strong>
+                                        <small>Tablet</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Sun Pharma</td>
+
+                            <td>150</td>
+
+                            <td>30</td>
+
+                            <td><strong>120</strong></td>
+
+                            <td>Dec 2027</td>
+
+                            <td>
+                                <span class="status available">
+                                    Good
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="update-stock-btn">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="medicine-name">
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-capsules"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Azithromycin 250mg</strong>
+                                        <small>Tablet</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Cipla</td>
+
+                            <td>50</td>
+
+                            <td>45</td>
+
+                            <td><strong>5</strong></td>
+
+                            <td>Aug 2027</td>
+
+                            <td>
+                                <span class="status low-stock">
+                                    Low
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="update-stock-btn">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="medicine-name">
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Amoxicillin 500mg</strong>
+                                        <small>Capsule</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Abbott</td>
+
+                            <td>80</td>
+
+                            <td>71</td>
+
+                            <td><strong>9</strong></td>
+
+                            <td>Nov 2027</td>
+
+                            <td>
+                                <span class="status low-stock">
+                                    Low
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="update-stock-btn">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="medicine-name">
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Vitamin D3</strong>
+                                        <small>Capsule</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Himalaya</td>
+
+                            <td>60</td>
+
+                            <td>18</td>
+
+                            <td><strong>42</strong></td>
+
+                            <td>Sep 2026</td>
+
+                            <td>
+                                <span class="status expiry-soon">
+                                    Expiring
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="update-stock-btn">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales & Billing | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html" class="side-active">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Sales & Billing</h1>
+                <p>Create bills and manage pharmacy sales</p>
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- BILLING GRID -->
+        <section class="billing-layout">
+
+
+            <!-- LEFT SIDE -->
+            <div class="billing-left">
+
+                <!-- CUSTOMER -->
+                <div class="dashboard-card billing-card">
+
+                    <div class="billing-card-title">
+
+                        <div>
+                            <h3>
+                                <i class="fa-solid fa-user"></i>
+                                Customer Details
+                            </h3>
+
+                            <p>Select customer for this bill</p>
+                        </div>
+
+                        <button class="new-customer-btn">
+                            <i class="fa-solid fa-user-plus"></i>
+                            New Customer
+                        </button>
+
+                    </div>
+
+
+                    <div class="billing-form-grid">
+
+                        <div class="billing-field">
+
+                            <label>Customer Name</label>
+
+                            <select>
+                                <option>Select Customer</option>
+                                <option>Rahul Sharma</option>
+                                <option>Priya Patil</option>
+                                <option>Amit Verma</option>
+                                <option>Sunil Kumar</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="billing-field">
+
+                            <label>Phone Number</label>
+
+                            <input
+                                type="text"
+                                placeholder="Customer phone"
+                                value="98765 43210"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADD MEDICINE -->
+                <div class="dashboard-card billing-card">
+
+                    <div class="billing-card-title">
+
+                        <div>
+                            <h3>
+                                <i class="fa-solid fa-pills"></i>
+                                Add Medicines
+                            </h3>
+
+                            <p>Select medicines and enter quantity</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicine-add-row">
+
+                        <div class="billing-field medicine-select-field">
+
+                            <label>Medicine</label>
+
+                            <select>
+                                <option>Select Medicine</option>
+                                <option>Paracetamol 500mg</option>
+                                <option>Azithromycin 250mg</option>
+                                <option>Amoxicillin 500mg</option>
+                                <option>Cetirizine 10mg</option>
+                                <option>Vitamin D3</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="billing-field quantity-field">
+
+                            <label>Quantity</label>
+
+                            <input
+                                type="number"
+                                value="1"
+                                min="1"
+                            >
+
+                        </div>
+
+
+                        <button class="add-item-btn">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- BILL ITEMS -->
+
+                    <div class="bill-items">
+
+                        <div class="bill-items-header">
+
+                            <span>Medicine</span>
+                            <span>Price</span>
+                            <span>Qty</span>
+                            <span>Total</span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="bill-item">
+
+                            <div class="bill-medicine">
+
+                                <div class="bill-medicine-icon">
+                                    <i class="fa-solid fa-pills"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Paracetamol 500mg</strong>
+                                    <small>Sun Pharma</small>
+                                </div>
+
+                            </div>
+
+                            <span>₹25</span>
+
+                            <span class="qty-box">2</span>
+
+                            <strong>₹50</strong>
+
+                            <button class="remove-item">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="bill-item">
+
+                            <div class="bill-medicine">
+
+                                <div class="bill-medicine-icon">
+                                    <i class="fa-solid fa-capsules"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Azithromycin 250mg</strong>
+                                    <small>Cipla</small>
+                                </div>
+
+                            </div>
+
+                            <span>₹85</span>
+
+                            <span class="qty-box">1</span>
+
+                            <strong>₹85</strong>
+
+                            <button class="remove-item">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="bill-item">
+
+                            <div class="bill-medicine">
+
+                                <div class="bill-medicine-icon">
+                                    <i class="fa-solid fa-pills"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Cetirizine 10mg</strong>
+                                    <small>Dr. Reddy's</small>
+                                </div>
+
+                            </div>
+
+                            <span>₹45</span>
+
+                            <span class="qty-box">2</span>
+
+                            <strong>₹90</strong>
+
+                            <button class="remove-item">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT -->
+                <div class="dashboard-card billing-card">
+
+                    <div class="billing-card-title">
+
+                        <div>
+                            <h3>
+                                <i class="fa-solid fa-credit-card"></i>
+                                Payment Method
+                            </h3>
+
+                            <p>Select payment method</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input type="radio" name="payment" checked>
+
+                            <span>
+                                <i class="fa-solid fa-money-bill"></i>
+                                Cash
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input type="radio" name="payment">
+
+                            <span>
+                                <i class="fa-solid fa-qrcode"></i>
+                                UPI
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input type="radio" name="payment">
+
+                            <span>
+                                <i class="fa-solid fa-credit-card"></i>
+                                Card
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT BILL SUMMARY -->
+            <div class="billing-right">
+
+                <div class="dashboard-card invoice-card">
+
+                    <div class="invoice-heading">
+
+                        <div class="invoice-icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+
+                        <div>
+                            <h3>Bill Summary</h3>
+                            <p>Invoice #INV-2026-0085</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-store">
+
+                        <strong>Medicare Pharmacy</strong>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Nagpur, Maharashtra
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                            +91 98765 43210
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-line"></div>
+
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <strong>₹225</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Discount</span>
+
+                        <strong class="discount">- ₹10</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Tax (5%)</span>
+
+                        <strong>₹10.75</strong>
+
+                    </div>
+
+
+                    <div class="invoice-line"></div>
+
+
+                    <div class="grand-total">
+
+                        <span>Total Amount</span>
+
+                        <strong>₹225.75</strong>
+
+                    </div>
+
+
+                    <div class="amount-paid">
+
+                        <label>Amount Paid</label>
+
+                        <input
+                            type="text"
+                            value="₹225.75"
+                        >
+
+                    </div>
+
+
+                    <div class="change-row">
+
+                        <span>Change</span>
+
+                        <strong>₹0.00</strong>
+
+                    </div>
+
+
+                    <button class="generate-bill-btn">
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                        Generate Bill
+
+                    </button>
+
+
+                    <button class="clear-bill-btn">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Clear Bill
+
+                    </button>
+
+                </div>
+
+
+                <!-- TODAY SALES -->
+
+                <div class="dashboard-card today-sales-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Today's Sales</h3>
+                            <p>Quick sales overview</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="today-sales-number">
+
+                        <strong>₹18,450</strong>
+
+                        <span>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.5% today
+                        </span>
+
+                    </div>
+
+
+                    <div class="today-sales-details">
+
+                        <div>
+                            <span>Invoices</span>
+                            <strong>48</strong>
+                        </div>
+
+                        <div>
+                            <span>Items Sold</span>
+                            <strong>186</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

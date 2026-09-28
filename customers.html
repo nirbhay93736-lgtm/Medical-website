@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html" class="side-active">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Customer Management</h1>
+                <p>Manage your pharmacy customers and purchase history</p>
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- TOOLBAR -->
+        <section class="customer-toolbar">
+
+            <div class="customer-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search customer by name or phone..."
+                >
+
+            </div>
+
+
+            <button class="add-customer-btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add Customer
+
+            </button>
+
+        </section>
+
+
+        <!-- CUSTOMER SUMMARY -->
+        <section class="customer-summary">
+
+            <div class="customer-stat">
+
+                <div class="customer-stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <span>Total Customers</span>
+                    <strong>526</strong>
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat">
+
+                <div class="customer-stat-icon green">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+                    <span>Active Customers</span>
+                    <strong>482</strong>
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat">
+
+                <div class="customer-stat-icon orange">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <div>
+                    <span>New This Month</span>
+                    <strong>28</strong>
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat">
+
+                <div class="customer-stat-icon purple">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div>
+                    <span>Customer Sales</span>
+                    <strong>₹84,650</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOMER TABLE -->
+        <section class="dashboard-card customer-table-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>All Customers</h3>
+                    <p>Customer information and purchase history</p>
+                </div>
+
+                <select class="filter-select">
+
+                    <option>All Customers</option>
+                    <option>Active</option>
+                    <option>New Customers</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="customer-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Customer</th>
+
+                            <th>Phone Number</th>
+
+                            <th>Address</th>
+
+                            <th>Total Purchases</th>
+
+                            <th>Last Purchase</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>#C001</td>
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+                                        <strong>Rahul Sharma</strong>
+                                        <small>rahul@example.com</small>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>98765 43210</td>
+
+                            <td>Nagpur, Maharashtra</td>
+
+                            <td>₹8,450</td>
+
+                            <td>18 Aug 2026</td>
+
+                            <td>
+                                <span class="customer-status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#C002</td>
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar purple-avatar">
+                                        PP
+                                    </div>
+
+                                    <div>
+                                        <strong>Priya Patil</strong>
+                                        <small>priya@example.com</small>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>91234 56780</td>
+
+                            <td>Wardha, Maharashtra</td>
+
+                            <td>₹6,720</td>
+
+                            <td>17 Aug 2026</td>
+
+                            <td>
+                                <span class="customer-status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#C003</td>
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar orange-avatar">
+                                        AV
+                                    </div>
+
+                                    <div>
+                                        <strong>Amit Verma</strong>
+                                        <small>amit@example.com</small>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>99887 66554</td>
+
+                            <td>Amravati, Maharashtra</td>
+
+                            <td>₹4,280</td>
+
+                            <td>16 Aug 2026</td>
+
+                            <td>
+                                <span class="customer-status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#C004</td>
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar red-avatar">
+                                        NS
+                                    </div>
+
+                                    <div>
+                                        <strong>Neha Singh</strong>
+                                        <small>neha@example.com</small>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>90909 80808</td>
+
+                            <td>Chandrapur, Maharashtra</td>
+
+                            <td>₹3,150</td>
+
+                            <td>10 Aug 2026</td>
+
+                            <td>
+                                <span class="customer-status inactive">
+                                    Inactive
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#C005</td>
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        SK
+                                    </div>
+
+                                    <div>
+                                        <strong>Sunil Kumar</strong>
+                                        <small>sunil@example.com</small>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>93456 78901</td>
+
+                            <td>Nagpur, Maharashtra</td>
+
+                            <td>₹5,680</td>
+
+                            <td>15 Aug 2026</td>
+
+                            <td>
+                                <span class="customer-status active">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <span>
+                    Showing 1–5 of 526 customers
+                </span>
+
+                <div>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page-active">1</button>
+
+                    <button>2</button>
+
+                    <button>3</button>
+
+                    <button>...</button>
+
+                    <button>106</button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

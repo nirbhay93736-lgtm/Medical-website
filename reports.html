@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html" class="side-active">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Reports</h1>
+
+                <p>
+                    View sales, stock, expiry and purchase reports
+                </p>
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- REPORT FILTER -->
+        <section class="report-filter dashboard-card">
+
+            <div class="report-filter-title">
+
+                <i class="fa-solid fa-filter"></i>
+
+                <div>
+                    <strong>Report Filter</strong>
+
+                    <span>
+                        Select date range to view reports
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="report-filter-controls">
+
+                <div class="report-date">
+
+                    <label>From</label>
+
+                    <input
+                        type="date"
+                        value="2026-08-01"
+                    >
+
+                </div>
+
+
+                <div class="report-date">
+
+                    <label>To</label>
+
+                    <input
+                        type="date"
+                        value="2026-08-20"
+                    >
+
+                </div>
+
+
+                <button class="generate-report-btn">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Generate Report
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- REPORT CARDS -->
+        <section class="report-cards">
+
+            <div class="report-card">
+
+                <div class="report-card-icon blue">
+                    <i class="fa-solid fa-calendar-day"></i>
+                </div>
+
+                <div>
+
+                    <span>Daily Sales</span>
+
+                    <strong>₹18,450</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.5% from yesterday
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <div class="report-card-icon green">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <div>
+
+                    <span>Monthly Sales</span>
+
+                    <strong>₹4,82,650</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        8.4% this month
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <div class="report-card-icon orange">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+
+                <div>
+
+                    <span>Stock Value</span>
+
+                    <strong>₹6,48,200</strong>
+
+                    <small>
+                        1,284 items in stock
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <div class="report-card-icon red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+
+                    <span>Expired Medicines</span>
+
+                    <strong>12</strong>
+
+                    <small>
+                        Requires attention
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SALES REPORT -->
+        <section class="dashboard-card report-section">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        <i class="fa-solid fa-chart-line"></i>
+                        Sales Report
+                    </h3>
+
+                    <p>
+                        Daily sales performance
+                    </p>
+
+                </div>
+
+
+                <button class="download-report-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </button>
+
+            </div>
+
+
+            <div class="sales-chart">
+
+                <div class="chart-y-axis">
+
+                    <span>₹25K</span>
+                    <span>₹20K</span>
+                    <span>₹15K</span>
+                    <span>₹10K</span>
+                    <span>₹5K</span>
+                    <span>₹0</span>
+
+                </div>
+
+
+                <div class="chart-area">
+
+                    <div class="chart-bars">
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:55%"></div>
+                            <span>14 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:72%"></div>
+                            <span>15 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:64%"></div>
+                            <span>16 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:84%"></div>
+                            <span>17 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:92%"></div>
+                            <span>18 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar" style="height:70%"></div>
+                            <span>19 Aug</span>
+                        </div>
+
+                        <div class="bar-column">
+                            <div class="bar current" style="height:78%"></div>
+                            <span>20 Aug</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TWO COLUMN REPORTS -->
+        <section class="report-grid">
+
+
+            <!-- STOCK REPORT -->
+            <div class="dashboard-card report-section">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            Stock Report
+                        </h3>
+
+                        <p>
+                            Current medicine stock
+                        </p>
+
+                    </div>
+
+                    <a href="stock.html" class="view-report">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="mini-report-list">
+
+                    <div class="mini-report-item">
+
+                        <div class="mini-report-icon green">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Available Stock</strong>
+                            <span>1,156 medicines</span>
+                        </div>
+
+                        <b>90%</b>
+
+                    </div>
+
+
+                    <div class="mini-report-item">
+
+                        <div class="mini-report-icon orange">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div>
+                            <strong>Low Stock</strong>
+                            <span>48 medicines</span>
+                        </div>
+
+                        <b>4%</b>
+
+                    </div>
+
+
+                    <div class="mini-report-item">
+
+                        <div class="mini-report-icon red">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div>
+                            <strong>Out of Stock</strong>
+                            <span>22 medicines</span>
+                        </div>
+
+                        <b>2%</b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PURCHASE REPORT -->
+            <div class="dashboard-card report-section">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Purchase Report
+                        </h3>
+
+                        <p>
+                            Recent supplier purchases
+                        </p>
+
+                    </div>
+
+                    <a href="suppliers.html" class="view-report">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="purchase-list">
+
+                    <div class="purchase-item">
+
+                        <div class="purchase-icon">
+                            SP
+                        </div>
+
+                        <div>
+
+                            <strong>Sun Pharma</strong>
+
+                            <span>
+                                18 Aug 2026
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹28,450
+                        </b>
+
+                    </div>
+
+
+                    <div class="purchase-item">
+
+                        <div class="purchase-icon purple">
+                            CP
+                        </div>
+
+                        <div>
+
+                            <strong>Cipla Ltd.</strong>
+
+                            <span>
+                                16 Aug 2026
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹21,680
+                        </b>
+
+                    </div>
+
+
+                    <div class="purchase-item">
+
+                        <div class="purchase-icon orange">
+                            AB
+                        </div>
+
+                        <div>
+
+                            <strong>Abbott India</strong>
+
+                            <span>
+                                14 Aug 2026
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹18,250
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- EXPIRED MEDICINES -->
+        <section class="dashboard-card expired-report">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Expired Medicines
+                    </h3>
+
+                    <p>
+                        Medicines that need immediate attention
+                    </p>
+
+                </div>
+
+
+                <span class="expired-count">
+                    12 Expired
+                </span>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Medicine</th>
+                            <th>Company</th>
+                            <th>Batch No.</th>
+                            <th>Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>Amoxicillin 500mg</strong>
+                            </td>
+
+                            <td>Abbott</td>
+
+                            <td>ABX4582</td>
+
+                            <td>25</td>
+
+                            <td>15 Aug 2026</td>
+
+                            <td>
+                                <span class="expired-badge">
+                                    Expired
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Cetirizine 10mg</strong>
+                            </td>
+
+                            <td>Dr. Reddy's</td>
+
+                            <td>CTR2218</td>
+
+                            <td>18</td>
+
+                            <td>10 Aug 2026</td>
+
+                            <td>
+                                <span class="expired-badge">
+                                    Expired
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Vitamin D3</strong>
+                            </td>
+
+                            <td>Sun Pharma</td>
+
+                            <td>VTD8931</td>
+
+                            <td>12</td>
+
+                            <td>05 Aug 2026</td>
+
+                            <td>
+                                <span class="expired-badge">
+                                    Expired
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

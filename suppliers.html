@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suppliers | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html" class="side-active">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Supplier Management</h1>
+
+                <p>
+                    Manage medicine suppliers and purchase records
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- TOOLBAR -->
+        <section class="supplier-toolbar">
+
+            <div class="supplier-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search supplier by name or contact..."
+                >
+
+            </div>
+
+
+            <button class="add-supplier-btn">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                Add Supplier
+
+            </button>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="supplier-summary">
+
+            <div class="supplier-stat">
+
+                <div class="supplier-stat-icon blue">
+                    <i class="fa-solid fa-truck-field"></i>
+                </div>
+
+                <div>
+
+                    <span>Total Suppliers</span>
+
+                    <strong>38</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="supplier-stat">
+
+                <div class="supplier-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+
+                    <span>Active Suppliers</span>
+
+                    <strong>34</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="supplier-stat">
+
+                <div class="supplier-stat-icon orange">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+
+                <div>
+
+                    <span>Medicines Supplied</span>
+
+                    <strong>186</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="supplier-stat">
+
+                <div class="supplier-stat-icon purple">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div>
+
+                    <span>Total Purchases</span>
+
+                    <strong>₹2.48L</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUPPLIER TABLE -->
+        <section class="dashboard-card supplier-table-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>All Suppliers</h3>
+
+                    <p>
+                        Supplier information and purchase history
+                    </p>
+
+                </div>
+
+
+                <select class="filter-select">
+
+                    <option>All Suppliers</option>
+
+                    <option>Active</option>
+
+                    <option>Inactive</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="supplier-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Supplier</th>
+
+                            <th>Contact Number</th>
+
+                            <th>Medicines Supplied</th>
+
+                            <th>Total Purchases</th>
+
+                            <th>Last Purchase</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- SUPPLIER 1 -->
+
+                        <tr>
+
+                            <td>#S001</td>
+
+                            <td>
+
+                                <div class="supplier-name">
+
+                                    <div class="supplier-avatar">
+                                        SP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Sun Pharma
+                                        </strong>
+
+                                        <small>
+                                            Pharmaceutical Company
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                1800 123 4567
+                            </td>
+
+
+                            <td>
+                                <strong>42</strong> medicines
+                            </td>
+
+
+                            <td>
+                                ₹78,450
+                            </td>
+
+
+                            <td>
+                                18 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <span class="supplier-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUPPLIER 2 -->
+
+                        <tr>
+
+                            <td>#S002</td>
+
+                            <td>
+
+                                <div class="supplier-name">
+
+                                    <div class="supplier-avatar purple-supplier">
+                                        CP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Cipla Ltd.
+                                        </strong>
+
+                                        <small>
+                                            Pharmaceutical Company
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                1800 267 7777
+                            </td>
+
+
+                            <td>
+                                <strong>36</strong> medicines
+                            </td>
+
+
+                            <td>
+                                ₹64,280
+                            </td>
+
+
+                            <td>
+                                16 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <span class="supplier-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUPPLIER 3 -->
+
+                        <tr>
+
+                            <td>#S003</td>
+
+                            <td>
+
+                                <div class="supplier-name">
+
+                                    <div class="supplier-avatar orange-supplier">
+                                        AB
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Abbott India
+                                        </strong>
+
+                                        <small>
+                                            Healthcare Company
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                1800 103 1460
+                            </td>
+
+
+                            <td>
+                                <strong>31</strong> medicines
+                            </td>
+
+
+                            <td>
+                                ₹52,680
+                            </td>
+
+
+                            <td>
+                                14 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <span class="supplier-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUPPLIER 4 -->
+
+                        <tr>
+
+                            <td>#S004</td>
+
+                            <td>
+
+                                <div class="supplier-name">
+
+                                    <div class="supplier-avatar red-supplier">
+                                        DR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Dr. Reddy's
+                                        </strong>
+
+                                        <small>
+                                            Pharmaceutical Company
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                040 4900 2900
+                            </td>
+
+
+                            <td>
+                                <strong>28</strong> medicines
+                            </td>
+
+
+                            <td>
+                                ₹38,450
+                            </td>
+
+
+                            <td>
+                                11 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <span class="supplier-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUPPLIER 5 -->
+
+                        <tr>
+
+                            <td>#S005</td>
+
+                            <td>
+
+                                <div class="supplier-name">
+
+                                    <div class="supplier-avatar green-supplier">
+                                        HI
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Himalaya
+                                        </strong>
+
+                                        <small>
+                                            Healthcare Products
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                1800 208 1930
+                            </td>
+
+
+                            <td>
+                                <strong>24</strong> medicines
+                            </td>
+
+
+                            <td>
+                                ₹24,760
+                            </td>
+
+
+                            <td>
+                                09 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <span class="supplier-status inactive">
+                                    Inactive
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <span>
+                    Showing 1–5 of 38 suppliers
+                </span>
+
+                <div>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page-active">
+                        1
+                    </button>
+
+                    <button>
+                        2
+                    </button>
+
+                    <button>
+                        3
+                    </button>
+
+                    <button>
+                        ...
+                    </button>
+
+                    <button>
+                        8
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

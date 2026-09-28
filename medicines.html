@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html" class="side-active">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Medicine Management</h1>
+                <p>Manage all medicines in your pharmacy</p>
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- TOP ACTION BAR -->
+        <section class="medicine-toolbar">
+
+            <div class="medicine-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search medicine by name or company..."
+                >
+
+            </div>
+
+            <button class="add-medicine-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Medicine
+            </button>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="medicine-summary">
+
+            <div class="mini-stat">
+                <div class="mini-icon">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
+
+                <div>
+                    <span>Total Medicines</span>
+                    <strong>248</strong>
+                </div>
+            </div>
+
+
+            <div class="mini-stat">
+                <div class="mini-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>Available</span>
+                    <strong>221</strong>
+                </div>
+            </div>
+
+
+            <div class="mini-stat">
+                <div class="mini-icon orange">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <span>Low Stock</span>
+                    <strong>18</strong>
+                </div>
+            </div>
+
+
+            <div class="mini-stat">
+                <div class="mini-icon red">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                </div>
+
+                <div>
+                    <span>Expired</span>
+                    <strong>9</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MEDICINE TABLE -->
+        <section class="dashboard-card medicine-table-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>All Medicines</h3>
+                    <p>Medicine inventory list</p>
+                </div>
+
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>Available</option>
+                    <option>Low Stock</option>
+                    <option>Expired</option>
+                </select>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="medicine-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Medicine</th>
+                            <th>Company</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>#001</td>
+
+                            <td>
+                                <div class="medicine-name">
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Paracetamol 500mg</strong>
+                                        <small>Tablet</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Sun Pharma</td>
+
+                            <td>₹25</td>
+
+                            <td>120</td>
+
+                            <td>Dec 2027</td>
+
+                            <td>
+                                <span class="status available">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="table-actions">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#002</td>
+
+                            <td>
+                                <div class="medicine-name">
+
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Azithromycin 250mg</strong>
+                                        <small>Tablet</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Cipla</td>
+
+                            <td>₹85</td>
+
+                            <td>5</td>
+
+                            <td>Aug 2027</td>
+
+                            <td>
+                                <span class="status low-stock">
+                                    Low Stock
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="table-actions">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#003</td>
+
+                            <td>
+                                <div class="medicine-name">
+
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-capsules"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Amoxicillin 500mg</strong>
+                                        <small>Capsule</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Abbott</td>
+
+                            <td>₹120</td>
+
+                            <td>9</td>
+
+                            <td>Nov 2027</td>
+
+                            <td>
+                                <span class="status low-stock">
+                                    Low Stock
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="table-actions">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#004</td>
+
+                            <td>
+                                <div class="medicine-name">
+
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-pills"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Cetirizine 10mg</strong>
+                                        <small>Tablet</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Dr. Reddy's</td>
+
+                            <td>₹45</td>
+
+                            <td>75</td>
+
+                            <td>Oct 2026</td>
+
+                            <td>
+                                <span class="status expiry-soon">
+                                    Expiring Soon
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="table-actions">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#005</td>
+
+                            <td>
+                                <div class="medicine-name">
+
+                                    <div class="medicine-img">
+                                        <i class="fa-solid fa-capsules"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Vitamin D3</strong>
+                                        <small>Capsule</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Himalaya</td>
+
+                            <td>₹110</td>
+
+                            <td>42</td>
+
+                            <td>Sep 2026</td>
+
+                            <td>
+                                <span class="status expiry-soon">
+                                    Expiring Soon
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="table-actions">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <span>Showing 1–5 of 248 medicines</span>
+
+                <div>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page-active">1</button>
+
+                    <button>2</button>
+                    <button>3</button>
+                    <button>...</button>
+                    <button>50</button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

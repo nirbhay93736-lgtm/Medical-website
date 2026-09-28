@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Medicare Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Medicare</h2>
+                <span>PHARMACY</span>
+            </div>
+        </div>
+
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="side-active">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </a>
+
+            <a href="medicines.html">
+                <i class="fa-solid fa-pills"></i>
+                Medicines
+            </a>
+
+            <a href="stock.html">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Stock Management
+            </a>
+
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </a>
+
+            <a href="billing.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales & Billing
+            </a>
+
+            <a href="suppliers.html">
+                <i class="fa-solid fa-truck-field"></i>
+                Suppliers
+            </a>
+
+        </nav>
+
+
+        <div class="menu-title report-title">REPORTS</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About Store
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                View Website
+            </a>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main">
+
+        <!-- TOP BAR -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back, Admin 👋</p>
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon medicine">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
+
+                <div>
+                    <p>Total Medicines</p>
+                    <h2>248</h2>
+                    <span class="positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        8% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon stock">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+
+                <div>
+                    <p>Available Stock</p>
+                    <h2>1,845</h2>
+                    <span class="positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon sales">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div>
+                    <p>Total Sales</p>
+                    <h2>₹84,650</h2>
+                    <span class="positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        15% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon customers">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <p>Total Customers</p>
+                    <h2>526</h2>
+                    <span class="positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        6% this month
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD GRID -->
+        <section class="dashboard-grid">
+
+
+            <!-- SALES OVERVIEW -->
+            <div class="dashboard-card sales-overview">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Sales Overview</h3>
+                        <p>Monthly sales performance</p>
+                    </div>
+
+                    <select>
+                        <option>2026</option>
+                        <option>2025</option>
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="chart-values">
+                        <span>₹20K</span>
+                        <span>₹15K</span>
+                        <span>₹10K</span>
+                        <span>₹5K</span>
+                        <span>₹0</span>
+                    </div>
+
+                    <div class="bars">
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:45%"></div>
+                            <span>Jan</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:60%"></div>
+                            <span>Feb</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:52%"></div>
+                            <span>Mar</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:72%"></div>
+                            <span>Apr</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:65%"></div>
+                            <span>May</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:82%"></div>
+                            <span>Jun</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:76%"></div>
+                            <span>Jul</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar" style="height:90%"></div>
+                            <span>Aug</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOW STOCK -->
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Low Stock</h3>
+                        <p>Medicines running low</p>
+                    </div>
+
+                    <a href="stock.html">View All</a>
+
+                </div>
+
+
+                <div class="alert-list">
+
+                    <div class="alert-item">
+
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+
+                        <div>
+                            <strong>Paracetamol 500mg</strong>
+                            <small>Only 8 units left</small>
+                        </div>
+
+                        <span class="low">Low</span>
+
+                    </div>
+
+
+                    <div class="alert-item">
+
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+
+                        <div>
+                            <strong>Azithromycin 250mg</strong>
+                            <small>Only 5 units left</small>
+                        </div>
+
+                        <span class="low">Low</span>
+
+                    </div>
+
+
+                    <div class="alert-item">
+
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+
+                        <div>
+                            <strong>Amoxicillin 500mg</strong>
+                            <small>Only 9 units left</small>
+                        </div>
+
+                        <span class="low">Low</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT SALES -->
+            <div class="dashboard-card recent-sales">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Sales</h3>
+                        <p>Latest transactions</p>
+                    </div>
+
+                    <a href="reports.html">View All</a>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Invoice</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#INV-1025</td>
+                                <td>Rahul Sharma</td>
+                                <td>₹850</td>
+                                <td>
+                                    <span class="paid">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#INV-1024</td>
+                                <td>Priya Patil</td>
+                                <td>₹1,240</td>
+                                <td>
+                                    <span class="paid">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#INV-1023</td>
+                                <td>Amit Verma</td>
+                                <td>₹560</td>
+                                <td>
+                                    <span class="paid">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#INV-1022</td>
+                                <td>Neha Singh</td>
+                                <td>₹1,850</td>
+                                <td>
+                                    <span class="pending">Pending</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPIRY ALERT -->
+            <div class="dashboard-card expiry-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Expiry Alert</h3>
+                        <p>Medicines expiring soon</p>
+                    </div>
+
+                    <i class="fa-solid fa-triangle-exclamation expiry-main-icon"></i>
+
+                </div>
+
+
+                <div class="expiry-item">
+                    <div>
+                        <strong>Vitamin D3</strong>
+                        <small>Expiry: Sep 2026</small>
+                    </div>
+
+                    <span>30 Days</span>
+                </div>
+
+
+                <div class="expiry-item">
+                    <div>
+                        <strong>Cetirizine 10mg</strong>
+                        <small>Expiry: Oct 2026</small>
+                    </div>
+
+                    <span>60 Days</span>
+                </div>
+
+
+                <div class="expiry-item">
+                    <div>
+                        <strong>Ibuprofen 400mg</strong>
+                        <small>Expiry: Oct 2026</small>
+                    </div>
+
+                    <span>65 Days</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
